@@ -6,8 +6,8 @@ There's no gulp, webpack, grunt, browserify or anything.
 ## Install
 
 ``` 
-git clone https://github.com/fri13th/rollup-jquery-boilerplate
-cd rollup-jquery-boilerplate
+git clone https://github.com/fri13th/rollup-jquery-boilerplate your-project
+cd your-project
 npm install
 ```
 

@@ -1,7 +1,7 @@
 # rollup-jquery-boilerplate
 
 Simple jquery + es6 boilerplate using [Rollup](https://github.com/rollup/rollup) and [Bublé](https://gitlab.com/Rich-Harris/buble). 
-There's no gulp, webpack, grunt or anything.
+There's no gulp, webpack, grunt, browserify or anything.
 
 ## Install
 

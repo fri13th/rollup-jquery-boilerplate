@@ -1,0 +1,29 @@
+{
+  "name": "rollup-boilerplate",
+  "version": "0.0.1",
+  "description": "Sample project for packages built with rollup.",
+  "main": "dist/app.global.js",
+  "jsnext:main": "dist/app.es6.js",
+  "repository": "npm/npm",
+  "license": "UNLICENSED",
+  "private": true,
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "production": "node build.js --production"
+  },
+  "devDependencies": {
+    "jquery": "1.12.3",
+    "rollup": "0.32.0",
+    "rollup-plugin-buble": "0.11.0",
+    "rollup-plugin-commonjs": "3.0.0",
+    "rollup-plugin-includepaths": "0.1.5",
+    "rollup-plugin-node-resolve": "1.7.0",
+    "rollup-plugin-uglify": "1.0.0",
+    "rollup-watch": "2.4.0"
+  }
+}

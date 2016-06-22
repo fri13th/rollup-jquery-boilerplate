@@ -1,2 +1,21 @@
-!function(n){"use strict";function o(n,o){return"\nHello, "+n+"!\n"+o.map(function(n){return""+n}).join("")+"\n"}function t(n){return n*n*n}n="default"in n?n["default"]:n;var u=[1,2,3];console.log(t(3)),n(function(){return console.log(o("World",u))})}(jQuery);
+(function ($) {
+  'use strict';
+
+  $ = 'default' in $ ? $['default'] : $;
+
+  function view(who, array) {
+    return ("\nHello, " + who + "!\n" + (array.map(function (no) { return ("" + no); }).join('')) + "\n");
+  }
+
+  // This function gets included
+  function cube ( x ) {
+    return x * x * x;
+  }
+
+  var array = [1, 2, 3];
+
+  console.log(cube(3));
+  $(function () { return console.log(view('World', array)); });
+
+}(jQuery));
 //# sourceMappingURL=app.js.map

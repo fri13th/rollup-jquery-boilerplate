@@ -5,16 +5,19 @@ const buble = require('rollup-plugin-buble');
 const includePaths = require('rollup-plugin-includepaths');
 const watch = require('rollup-watch');
 const uglify = require('rollup-plugin-uglify');
+let bs = require("browser-sync").create();
 
 const appName = 'app';
 
 let env = {
   watch: false,
+  serve: false,
   production: false
 };
 
 process.argv.forEach(function (arg) {
   if (arg.indexOf('--watch') > -1) env.watch = true;
+  if (arg.indexOf('--serve') > -1) env.serve = true;
   if (arg.indexOf('--production') > -1) env.production = true;
 });
 
@@ -56,13 +59,17 @@ let options = {
   ]
 };
 
-if (env.watch) {
+if (env.watch || env.serve) {
   watch(rollup, options);
+  if (env.serve) {
+    bs.watch("*.html, dist/*.js").on("change", bs.reload);
+    bs.init({server:"./"});
+  }
 }
 else {
   rollup.rollup(options).then(bundle => {
     for (let i = 0; i < options.targets.length; i++) {
-      Promise.resolve(options.targets[i]).then(bundle.write);
+      bundle.write(options.targets[i]);
     }
   }).catch(error => {console.error(error);});
 }

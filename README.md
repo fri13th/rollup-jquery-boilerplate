@@ -23,6 +23,13 @@ npm run build
 npm run watch
 ``` 
 
+## Watch and Serve using browser-sync
+
+``` 
+npm run serve
+``` 
+
+
 ## Uglify
 
 ``` 

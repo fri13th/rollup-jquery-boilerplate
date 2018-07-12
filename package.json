@@ -4,8 +4,8 @@
   "description": "Sample project for rollup and postcss with autoprefixer.",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "./node_modules/rollup/bin/rollup -c",
-    "watch": "./node_modules/rollup/bin/rollup -c --watch"
+    "start": "./node_modules/rollup/bin/rollup -c --watch",
+    "build": "./node_modules/rollup/bin/rollup -c"
   },
   "devDependencies": {
     "autoprefixer": "8.6.5",
@@ -18,7 +18,8 @@
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-browsersync": "0.2.6",
     "rollup-plugin-node-resolve": "3.3.0",
-    "rollup-plugin-postcss": "1.6.2"
+    "rollup-plugin-postcss": "1.6.2",
+    "rollup-plugin-uglify": "4.0.0"
   },
   "browserslist": [
     ">0.5%",

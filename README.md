@@ -16,14 +16,14 @@ cd your-project
 yarn
 ```
 
-## Build
+## Dev
+
+```
+yarn start
+```
+
+## Prod
 
 ```
 yarn build
-```
-
-## Watch
-
-```
-yarn watch
 ```

@@ -1,1 +1,0 @@
-{"version":3,"sources":["dist/js/main.css","dist/js/sub.css"],"names":[],"mappings":"AAAA,4BACE,UAAY,CADd,AAEC,+CADC,UAAY,CADd,AAEC,cADC,UAAY,CACb;ACFD,KACE,SAAW,CACZ","file":"dist/css/main.min.css","sourcesContent":["::placeholder {\n  color: gray;\n}\n","body {\n  color: red;\n}\n"]}

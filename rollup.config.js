@@ -6,9 +6,22 @@ import browsersync from 'rollup-plugin-browsersync';
 import { uglify } from 'rollup-plugin-uglify';
 import autoprefixer from 'autoprefixer';
 
-const production = !process.env.ROLLUP_WATCH;
-let plugins = production
+let plugins = process.env.ROLLUP_WATCH
   ? [
+      resolve(),
+      browsersync({ server: 'dist' }),
+      postcss({
+        extract: './dist/css/main.css',
+        sourceMap: true,
+        plugins: [
+          autoprefixer({
+            grid: true
+          })
+        ]
+      }),
+      babel(babelrc())
+    ]
+  : [
       resolve(),
       postcss({
         extract: './dist/css/main.css',
@@ -22,19 +35,6 @@ let plugins = production
       }),
       babel(babelrc()),
       uglify()
-    ]
-  : [
-      resolve(),
-      browsersync({ server: 'dist' }),
-      postcss({
-        extract: './dist/css/main.css',
-        plugins: [
-          autoprefixer({
-            grid: true
-          })
-        ]
-      }),
-      babel(babelrc())
     ];
 
 export default {

@@ -1,3 +1,18 @@
-::-webkit-input-placeholder{color:gray}:-ms-input-placeholder,::-ms-input-placeholder{color:gray}::placeholder{color:gray}
-body{color:red}
+::-webkit-input-placeholder {
+  color: gray;
+}
+:-ms-input-placeholder {
+  color: gray;
+}
+::-ms-input-placeholder {
+  color: gray;
+}
+::placeholder {
+  color: gray;
+}
+
+body {
+  color: red;
+}
+
 /*# sourceMappingURL=main.css.map */

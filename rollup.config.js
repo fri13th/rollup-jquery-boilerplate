@@ -47,7 +47,7 @@ export default {
       sourcemap: true
     },
     {
-      file: 'dist/js/main.es6.js',
+      file: 'dist/js/main.es.js',
       format: 'es',
       globals: { jquery: '$' },
       sourcemap: true

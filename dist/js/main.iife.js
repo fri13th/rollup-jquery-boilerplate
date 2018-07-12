@@ -1,2 +1,22 @@
-!function(){"use strict";var n,o=[1,2,3];console.log((n=3)*n*n),$(function(){return console.log("\nHello, "+"World"+"!\n"+o.map(function(n){return""+n}).join("")+"\n")})}();
+(function () {
+  'use strict';
+
+  function view(who, array) {
+    return `
+Hello, ${who}!
+${array.map(no => `${no}`).join('')}
+`;
+  }
+
+  // This function gets included
+  function cube ( x ) {
+    return x * x * x;
+  }
+
+  let array = [1, 2, 3];
+
+  console.log(cube(3));
+  $(() => console.log(view('World', array)));
+
+}());
 //# sourceMappingURL=main.iife.js.map

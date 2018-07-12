@@ -18,8 +18,7 @@ let plugins = process.env.ROLLUP_WATCH
             grid: true
           })
         ]
-      }),
-      babel(babelrc())
+      })
     ]
   : [
       resolve(),

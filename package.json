@@ -1,31 +1,32 @@
 {
   "name": "rollup-boilerplate",
-  "version": "0.0.1",
-  "description": "Sample project for packages built with rollup.",
-  "main": "dist/app.global.js",
-  "jsnext:main": "dist/app.es6.js",
-  "repository": "npm/npm",
+  "version": "0.1.0",
+  "description": "Sample project for rollup and postcss with autoprefixer.",
   "license": "UNLICENSED",
-  "private": true,
-  "files": [
-    "src",
-    "dist"
-  ],
   "scripts": {
-    "build": "node build.js",
-    "watch": "node build.js --watch",
-    "serve": "node build.js --serve",
-    "production": "node build.js --production"
+    "build": "./node_modules/rollup/bin/rollup -c",
+    "watch": "./node_modules/rollup/bin/rollup -c --watch"
   },
   "devDependencies": {
-    "browser-sync": "2.13.0",
-    "jquery": ">3.0.0",
-    "rollup": "0.34.1",
-    "rollup-plugin-buble": "0.12.1",
-    "rollup-plugin-commonjs": "3.3.1",
-    "rollup-plugin-includepaths": "0.1.5",
-    "rollup-plugin-node-resolve": "1.7.1",
-    "rollup-plugin-uglify": "1.0.1",
-    "rollup-watch": "2.5.0"
+    "autoprefixer": "8.6.5",
+    "babel-core": "6.26.3",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-preset-env": "1.7.0",
+    "babelrc-rollup": "3.0.0",
+    "browserslist": "4.0.0",
+    "rollup": "0.62.0",
+    "rollup-plugin-babel": "3.0.7",
+    "rollup-plugin-browsersync": "0.2.6",
+    "rollup-plugin-node-resolve": "3.3.0",
+    "rollup-plugin-postcss": "1.6.2"
+  },
+  "browserslist": [
+    ">0.5%",
+    "ie 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "axios": "0.18.0",
+    "jquery": "3.3.1"
   }
 }

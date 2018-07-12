@@ -1,44 +1,28 @@
 # rollup-jquery-boilerplate
 
-Simple jquery + es6 boilerplate using [Rollup](https://github.com/rollup/rollup) and [Bublé](https://gitlab.com/Rich-Harris/buble). 
-There's no gulp, webpack, grunt, browserify or anything.
+Simple jquery + es6 + autoprefixer boilerplate using [Rollup](https://github.com/rollup/rollup)
 
-## Install
+2018.07.12
+I set up boilerplate for IE 11 and above browser with css grid.
+This will be enough for legacy web development.
 
-``` 
+I removed old configs, but prettier in VS Code doesn't work well with .babelrc [Fix](https://github.com/prettier/prettier/issues/4636)
+There are some problems in rollup and babel7, so I set up using babel6. I'll fix it later.
+
+```
 git clone https://github.com/fri13th/rollup-jquery-boilerplate your-project
 cd your-project
-npm install
+yarn
 ```
 
 ## Build
 
-``` 
-npm run build
-``` 
+```
+yarn build
+```
 
 ## Watch
 
-``` 
-npm run watch
-``` 
-
-## Watch and Serve using browser-sync
-
-``` 
-npm run serve
-``` 
-
-
-## Uglify
-
-``` 
-npm run production
-``` 
-
-## Config
-
-You can set distribution file name in build.js.
-``` 
-const appName = 'app';
-``` 
+```
+yarn watch
+```

@@ -9,7 +9,7 @@ import autoprefixer from 'autoprefixer';
 let plugins = process.env.ROLLUP_WATCH
   ? [
       resolve(),
-      browsersync({ server: 'static' }),
+      browsersync({ server: 'public' }),
       postcss({
         extract: './dist/css/main.css',
         sourceMap: true,

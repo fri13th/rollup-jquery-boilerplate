@@ -1,5 +1,4 @@
 import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import browsersync from 'rollup-plugin-browsersync';
@@ -32,7 +31,11 @@ let plugins = process.env.ROLLUP_WATCH
           })
         ]
       }),
-      babel(babelrc()),
+      babel({
+        babelrc: false,
+        presets: [['@babel/preset-env']],
+        exclude: 'node_modules/**'
+      }),
       uglify()
     ];
 

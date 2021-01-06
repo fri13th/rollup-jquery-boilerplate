@@ -10,7 +10,7 @@ let plugins = process.env.ROLLUP_WATCH
       resolve(),
       browsersync({ server: 'public' }),
       postcss({
-        extract: './dist/css/main.css',
+        extract: 'dist/css/main.css',
         sourceMap: true,
         plugins: [
           autoprefixer({
@@ -22,7 +22,7 @@ let plugins = process.env.ROLLUP_WATCH
   : [
       resolve(),
       postcss({
-        extract: './dist/css/main.css',
+        extract: 'dist/css/main.css',
         minimize: true,
         sourceMap: true,
         plugins: [
